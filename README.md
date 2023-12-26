@@ -6,12 +6,14 @@ This is a very basic extension, it just adds shortcuts for 4 Pirating sites and 
 
 ![Image Description](https://i.imgur.com/ISh8ih6.png)
 
+Unpack "iMSteam.rar"
+
 Go to "Manage Extensions" in Chrome
 
 Enable "Developer Mode"
 
 Click on "Load unpacked"
 
-Select the unpacked folder labled "iMSteam"
+Select the unpacked folder "iMSteam"
 
 DONE
