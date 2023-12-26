@@ -1,6 +1,5 @@
 # iMSteam
 Adds pirated alternatives for steam's games (Online-fix, FitGirl, Skidrowreloaded and SteamRIP)
-___________________________ SETUP _______________________________
 
 Go to "Manage Extensions" in Chrome
 Enable "Developer Mode"
