@@ -15,7 +15,7 @@ Chrome Extension
 3. Enable "Developer mode" in the top right corner.
 4. Click on "Load unpacked" and select the folder containing the extension files.
 
-## Installation via Tampermonkey
+## Installation via Tampermonkey (Thanks to @Patraskon for the script and suggestion)
 
 To install this extension as a userscript using Tampermonkey:
 
