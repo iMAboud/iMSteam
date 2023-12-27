@@ -1,6 +1,6 @@
 # iMSteam
 
-![Image Description](https://i.imgur.com/ISh8ih6.png)
+![Image Description](https://i.imgur.com/EsVJVeb.png)
 
 Adds pirated alternatives on Steam's website. 
 
