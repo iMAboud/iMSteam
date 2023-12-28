@@ -20,6 +20,7 @@ Chrome Extension
 4. Click on "Load unpacked" and select the folder containing the extension files.
 
 ## Installation via Tampermonkey (Thanks to '@Patraskon' for the script and suggestion)
+### Tampermonkey script isn't updated yet, still working on it.
 
 To install this extension as a userscript using Tampermonkey:
 
