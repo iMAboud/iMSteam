@@ -10,7 +10,8 @@ Added Crack Status and GoG
 
 ## Features
 Searches for the Steam game you're viewing on the web-page on a cracked game. 
-Features 6 sites (Online-fix | FitGirl | Skidrowreloaded | SteamRIP | Dodi Repacks | Gload.to | Gog Games | Crack Status)
+Features 6 sites 
+(Online-fix | FitGirl | Skidrowreloaded | SteamRIP | Dodi Repacks | Gload.to | Gog Games | Crack Status)
 
 ## Installation
 Chrome Extension
