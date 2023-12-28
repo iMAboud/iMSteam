@@ -51,5 +51,7 @@
 
     const new2SiteSearchLink = `https://gload.to/?s=${formattedGameName}`;
     createButton(new2SiteSearchLink, "Gload", "Search on Gload", "https://gload.to/logo.png");
-
+    
+    const new3SiteSearchLink = `https://rutracker.org/forum/tracker.php?nm=${formattedGameName}`
+    createButton(new3SiteSearchLink, "RuTracker", "https://rutracker.org/favicon-32x32.png");
 })();
