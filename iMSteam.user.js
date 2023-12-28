@@ -37,9 +37,6 @@
     const steamDBSearchLink = `https://online-fix.me/index.php?do=search&subaction=search&story=${formattedGameName}`;
     createButton(steamDBSearchLink, "Online Fix", "Search on Online Fix", "https://i.imgur.com/WAXRAUw.png");
 
-    const site1SearchLink = `https://www.skidrowreloaded.com/?s=${formattedGameName}&x=0&y=0`;
-    createButton(site1SearchLink, "Skidrow", "Search on Skidrow", "https://i.imgur.com/sfzB2DE.png");
-
     const site2SearchLink = `https://fitgirl-repacks.site/?s=${formattedGameName}`;
     createButton(site2SearchLink, "FitGirl", "Search on FitGirl", "https://i.imgur.com/GOFbweI.png");
 
