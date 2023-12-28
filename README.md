@@ -14,7 +14,7 @@ Features 6 sites (Online-fix | FitGirl | Skidrowreloaded | SteamRIP | Dodi Repac
 
 ## Installation
 Chrome Extension
-1. Download [this](https://github.com/iMAboud/iMSteam/raw/main/iMSteamV1.1.rar) extension or Clone the repository.
+1. Download [this](https://github.com/iMAboud/iMSteam/raw/main/iMSteam.V.1.3.rar) extension or Clone the repository.
 2. Open Chrome and go to `chrome://extensions/`.
 3. Enable "Developer mode" in the top right corner.
 4. Click on "Load unpacked" and select the folder containing the extension files.
