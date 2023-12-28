@@ -4,6 +4,10 @@
 
 Adds pirated alternatives on Steam's website. 
 
+## Update
+Added settings to toggle on/off on sites to show or hide them.
+Added Crack Status and GoG
+
 ## Features
 Searches for the Steam game you're viewing on the web-page on a cracked game. 
 Features 6 sites (Online-fix | FitGirl | Skidrowreloaded | SteamRIP | Dodi Repacks | Gload.to)
