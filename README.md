@@ -17,11 +17,21 @@ Features 6 sites
 (Online-fix | FitGirl | Skidrowreloaded | SteamRIP | Dodi Repacks | Gload.to | Gog Games | Crack Status)
 
 ## Installation
-Chrome Extension
-1. Download [this](https://github.com/iMAboud/iMSteam/raw/main/iMSteam.V.1.3.rar) extension or Clone the repository.
+### Chrome Extension
+1. Download the extension here [iMSteam for Chrome](https://github.com/iMAboud/iMSteam/raw/main/iMSteam.V.1.3.rar) extension or Clone the repository.
 2. Open Chrome and go to `chrome://extensions/`.
 3. Enable "Developer mode" in the top right corner.
 4. Click on "Load unpacked" and select the folder containing the extension files.
+
+### Firefox Extension
+(The extension is under review in Mozilla add-on store)
+
+For menual installation:
+1. Download the .xpi for firefox here [iMSteam for Firefox](https://github.com/iMAboud/iMSteam/raw/main/iMSteam%20FireFox.xpi)
+2. Open Firefox and go to extensions or `about:addons`.
+3. Click on the gear icon at the top then select "install add-on from file"
+4. Select the "iMSteam FireFox.xpi" file you just downloaded.
+5. It will prompt you with confirmation press "Add" and "Okay".
 
 ## Installation via Tampermonkey (Thanks to '@Patraskon' for the script and suggestion)
 
