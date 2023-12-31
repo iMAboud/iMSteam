@@ -7,6 +7,7 @@ Adds pirated alternatives on Steam's website.
 ## Update
 Added settings to toggle on/off on sites to show or hide them.
 Added Crack Status and GoG
+Tampermonkey user-script updated
 
 ## Features
 Searches for the Steam game you're viewing on the web-page on a cracked game. 
@@ -21,7 +22,6 @@ Chrome Extension
 4. Click on "Load unpacked" and select the folder containing the extension files.
 
 ## Installation via Tampermonkey (Thanks to '@Patraskon' for the script and suggestion)
-### Tampermonkey script isn't updated yet, still working on it.
 
 To install this extension as a userscript using Tampermonkey:
 
