@@ -6,7 +6,9 @@ Adds pirated alternatives on Steam's website.
 
 ## Update
 Added settings to toggle on/off on sites to show or hide them.
+
 Added Crack Status and GoG
+
 Tampermonkey user-script updated
 
 ## Features
