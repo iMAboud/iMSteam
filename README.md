@@ -5,9 +5,11 @@
 Adds pirated alternatives on Steam's website. 
 
 ## Update
+Added Firefox support
+
 Added settings to toggle on/off on sites to show or hide them.
 
-Added Crack Status and GoG
+Added Crack Status and GoG Games
 
 Tampermonkey user-script updated to include RuTracker and 1337x (these are only in user-script at the moment).
 
