@@ -35,7 +35,7 @@ For menual installation:
 4. Select the "iMSteam FireFox.xpi" file you just downloaded.
 5. It will prompt you with confirmation press "Add" and "Okay".
 
-## Installation via Tampermonkey (Thanks to '@Patraskon' for the script and suggestion)
+## Installation via Tampermonkey 
 
 To install this extension as a userscript using Tampermonkey:
 
