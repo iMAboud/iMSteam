@@ -9,7 +9,7 @@ Added settings to toggle on/off on sites to show or hide them.
 
 Added Crack Status and GoG
 
-Tampermonkey user-script updated
+Tampermonkey user-script updated to include RuTracker and 1337x (these are only in user-script at the moment).
 
 ## Features
 Searches for the Steam game you're viewing on the web-page on a cracked game. 
