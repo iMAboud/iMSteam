@@ -29,7 +29,7 @@
             img.style.transition = 'transform 0.3s ease-in-out';
             img.style.borderRadius = '8px';
             img.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.3)';
-            img.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'; 
+            img.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'; // Slightly darker background
 
             linkButton.appendChild(img);
             gameNameElement.parentNode.appendChild(linkButton);
@@ -62,6 +62,12 @@
     const crackstatus = `https://crackstatus.net/tracker.php?nm=${formattedGameName}`;
     createButton(crackstatus, "Crack Status", "Search on Crack Status", "https://crackstatus.net/styles/templates/default/images/Hot_icons/rel/PNL2.png");
 
+    const rutracker= `https://rutracker.org/forum/tracker.php?nm=${formattedGameName}`;
+    createButton(rutracker, "RuTracker", "Search on RuTracker", "https://i.imgur.com/FUojuvE.png");
+
+    const x1337= `https://1337x.to/sort-category-search/${formattedGameName}/Games/seeders/desc/1/`;
+    createButton(x1337, "1337x", "Search on 1337x", "https://i.imgur.com/sNwyKFm.png");
+
     GM_addStyle(`
         body {
             background-color: #222;
@@ -87,7 +93,7 @@
             transition: transform 0.3s ease-in-out;
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            background-color: rgba(0, 0, 0, 0.2); 
+            background-color: rgba(0, 0, 0, 0.2); /* Slightly darker background */
         }
 
         a:hover img {
