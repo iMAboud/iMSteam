@@ -26,9 +26,9 @@ Features 6 sites
 4. Click on "Load unpacked" and select the folder containing the extension files.
 
 ### Firefox Extension
-(The extension is under review in Mozilla add-on store)
+From Firefox add-on store: https://addons.mozilla.org/en-US/firefox/addon/imsteam/
 
-For menual installation:
+Or menual installation:
 1. Download the .xpi for firefox here [iMSteam for Firefox](https://github.com/iMAboud/iMSteam/raw/main/iMSteam%20FireFox.xpi)
 2. Open Firefox and go to extensions or `about:addons`.
 3. Click on the gear icon at the top then select "install add-on from file"
