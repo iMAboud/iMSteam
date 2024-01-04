@@ -20,7 +20,7 @@ Features 6 sites
 
 ## Installation
 ### Chrome Extension
-1. Download the extension here [iMSteam for Chrome](https://github.com/iMAboud/iMSteam/raw/main/iMSteam.V1.4-Chrome.rar) 
+1. Download the extension here [iMSteam for Chrome](https://github.com/iMAboud/iMSteam/raw/main/iMSteam%20Chrome%20V1.4.rar) 
 2. Open Chrome and go to `chrome://extensions/`.
 3. Enable "Developer mode" in the top right corner.
 4. Click on "Load unpacked" and select the folder containing the extension files.
