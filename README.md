@@ -21,20 +21,20 @@ Features 6 sites
 (Online-fix | FitGirl | Skidrowreloaded | SteamRIP | Dodi Repacks | Gload.to | Gog Games | Crack Status)
 
 ## Installation
-### Chrome Extension
-From Google Chrome's Store: https://chrome.google.com/webstore/detail/ngkhabcnlbbbfgalblmejolbifddmoji
+### Chrome Extension (Recommended)
+Search for "iMSteam" in Chrome's web store or head over to this [link](https://chrome.google.com/webstore/detail/ngkhabcnlbbbfgalblmejolbifddmoji)
 
-Or menual installation 
+Or manual installation 
 1. Download the extension here [iMSteam for Chrome](https://github.com/iMAboud/iMSteam/raw/main/iMSteam%20Chrome%20V1.4.rar) 
 2. Open Chrome and go to `chrome://extensions/`.
 3. Enable "Developer mode" in the top right corner.
 4. Click on "Load unpacked" and select the folder containing the extension files.
 
-### Firefox Extension
-From Firefox add-on store: https://addons.mozilla.org/en-US/firefox/addon/imsteam/
-
-Or menual installation:
-1. Download the .xpi for firefox here [iMSteam for Firefox](https://github.com/iMAboud/iMSteam/raw/main/iMSteam%20FireFox.xpi) ## Not Updated, will be updated later today
+### Firefox Extension (Recommended)
+Search for "iMSteam" in Firefox's web store or head over to this [link](https://addons.mozilla.org/en-US/firefox/addon/imsteam/)
+ 
+Or manual installation:
+1. Download the .xpi for firefox here [iMSteam for Firefox](https://github.com/iMAboud/iMSteam/raw/main/iMSteam%20FireFox.xpi)
 2. Open Firefox and go to extensions or `about:addons`.
 3. Click on the gear icon at the top then select "install add-on from file"
 4. Select the "iMSteam FireFox.xpi" file you just downloaded.
@@ -50,6 +50,7 @@ To install this extension as a userscript using Tampermonkey:
 4. Paste the contents of the userscript into the editor.
 5. Save the script by pressing `Ctrl + S` or clicking the "File" menu and selecting "Save."
 
+### For Opera users you can use Chrome's web store or manual installation. 
 
 ## Usage
 
