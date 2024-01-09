@@ -34,7 +34,7 @@ Or menual installation
 From Firefox add-on store: https://addons.mozilla.org/en-US/firefox/addon/imsteam/
 
 Or menual installation:
-1. Download the .xpi for firefox here [iMSteam for Firefox](https://github.com/iMAboud/iMSteam/raw/main/iMSteam%20FireFox.xpi)
+1. Download the .xpi for firefox here [iMSteam for Firefox](https://github.com/iMAboud/iMSteam/raw/main/iMSteam%20FireFox.xpi) ## Not Updated, will be updated later today
 2. Open Firefox and go to extensions or `about:addons`.
 3. Click on the gear icon at the top then select "install add-on from file"
 4. Select the "iMSteam FireFox.xpi" file you just downloaded.
