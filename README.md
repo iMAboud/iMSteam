@@ -25,7 +25,7 @@ Features 6 sites
 Search for "iMSteam" in Chrome's web store or head over to this [link](https://chrome.google.com/webstore/detail/ngkhabcnlbbbfgalblmejolbifddmoji)
 
 Or manual installation 
-1. Download the extension here [iMSteam for Chrome](https://github.com/iMAboud/iMSteam/raw/main/iMSteam%20Chrome%20V1.4.rar) 
+1. Download the extension here [iMSteam for Chrome](https://github.com/iMAboud/iMSteam/raw/main/iMSteam.zip) 
 2. Open Chrome and go to `chrome://extensions/`.
 3. Enable "Developer mode" in the top right corner.
 4. Click on "Load unpacked" and select the folder containing the extension files.
