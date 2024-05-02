@@ -75,3 +75,8 @@ You can add or remove any site yourself following these simple steps:
 - If the search quarry is at the end of the URL just add " ${formattedGameName} " at the end of it.
   
 - Save script and refresh steam page. 
+
+## Donate
+
+- [PayPal](https://www.paypal.com/paypalme/imaboud)
+- [Buy Me a Coffee](https://buymeacoffee.com/imaboud)
