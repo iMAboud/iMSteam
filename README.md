@@ -20,7 +20,7 @@ Tampermonkey user-script updated to include RuTracker and 1337x (these are only 
 ## Features
 Searches for the Steam game you're viewing on the web-page on a cracked game. 
 Features 7 sites 
-(Online-fix | FitGirl | Skidrowreloaded | SteamRIP | Dodi Repacks | Gload.to | Gog Games | Crack Status, Gazelle)
+(Online-fix | FitGirl | Skidrowreloaded | SteamRIP | Dodi Repacks | Gload.to | Gog Games | Crack Status | Gazelle)
 
 ## Installation
 ### Chrome Extension (Recommended)
