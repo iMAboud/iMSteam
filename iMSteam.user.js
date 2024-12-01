@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         iMSteam
-// @version      1.3
+// @version      1.4
 // @description  Add search links for games on Steam pages
 // @author       iMAboud
 // @match        https://store.steampowered.com/*
@@ -44,6 +44,9 @@
     const skidrow = `https://www.skidrowreloaded.com/?s=${formattedGameName}&x=0&y=0`;
     createButton(skidrow, "Skidrow", "Search on Skidrow", "https://i.imgur.com/sfzB2DE.png");
 
+    const gazelle = `https://gazellegames.net/torrents.php?searchstr=${formattedGameName}`;
+    createButton(gazelle, "Gazelle", "Search on Gazelle", "https://i.imgur.com/aGcQkdP.png");
+
     const fitgirl = `https://fitgirl-repacks.site/?s=${formattedGameName}`;
     createButton(fitgirl, "FitGirl", "Search on FitGirl", "https://i.imgur.com/GOFbweI.png");
 
@@ -56,7 +59,7 @@
     const gload = `https://gload.to/?s=${formattedGameName}`;
     createButton(gload, "Gload", "Search on Gload", "https://gload.to/logo.png");
 
-    const gog = `https://www.gog-games.to/search/${formattedGameName}`;
+    const gog = `https://www.gog-games.to/?q=${formattedGameName}`;
     createButton(gog, "GOG", "Search on GOG", "https://i.imgur.com/wXfz72C.png");
 
     const crackstatus = `https://crackstatus.net/tracker.php?nm=${formattedGameName}`;
