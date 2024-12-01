@@ -5,8 +5,6 @@
 Adds pirated alternatives on Steam's website. 
 
 ## Update
-Added Gazelle and fixed GoG
-
 Added in Chrome Extension Store
 
 Added Firefox support
@@ -19,8 +17,8 @@ Tampermonkey user-script updated to include RuTracker and 1337x (these are only 
 
 ## Features
 Searches for the Steam game you're viewing on the web-page on a cracked game. 
-Features 7 sites 
-(Online-fix | FitGirl | Skidrowreloaded | SteamRIP | Dodi Repacks | Gload.to | Gog Games | Crack Status | Gazelle)
+Features 6 sites 
+(Online-fix | FitGirl | Skidrowreloaded | SteamRIP | Dodi Repacks | Gload.to | Gog Games | Crack Status)
 
 ## Installation
 ### Chrome Extension (Recommended)
