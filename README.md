@@ -16,9 +16,6 @@ Adds pirated alternatives on Steam's website.
 
 ![](https://i.imgur.com/lTroyYX.png)
 
-## Features
-Searches for the Steam game you're viewing on the web-page on a cracked game. 
-
 
 ## Installation
 ### Chrome Extension (Recommended)
