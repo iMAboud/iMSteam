@@ -1,24 +1,24 @@
+<div align="center">
+
 # iMSteam
 
-![Image Description](https://i.imgur.com/Xgdg11U.png)
+![Image Description](https://i.imgur.com/LXqYQA1.png)
+
+
 
 Adds pirated alternatives on Steam's website. 
 
 ## Update
-Added in Chrome Extension Store
+- You can now add a site, customize, edit or remove any existing site.
+- Added in Chrome Extension Store
+- Firefox support
+- Tampermonkey user-script support
 
-Added Firefox support
-
-Added settings to toggle on/off on sites to show or hide them.
-
-Added Crack Status and GoG Games
-
-Tampermonkey user-script updated to include RuTracker and 1337x (these are only in user-script at the moment).
+![](https://i.imgur.com/lTroyYX.png)
 
 ## Features
 Searches for the Steam game you're viewing on the web-page on a cracked game. 
-Features 6 sites 
-(Online-fix | FitGirl | Skidrowreloaded | SteamRIP | Dodi Repacks | Gload.to | Gog Games | Crack Status)
+
 
 ## Installation
 ### Chrome Extension (Recommended)
@@ -46,37 +46,20 @@ To install this extension as a userscript using Tampermonkey:
 4. Paste the contents of the userscript into the editor.
 5. Save the script by pressing `Ctrl + S` or clicking the "File" menu and selecting "Save."
 
-### For Opera users you can use Chrome's web store or manual installation. 
 
-## Usage
+## How to Use:
+Browse Steam, and click the site under the game's name that suits you.
 
-Just browse Steam as normal, you'll find the sites right under the game's name, just click the site that suits you. 
-Note: Online-Fix is a Co-Op/Multiplayer only games. You will not find singleplayers on it. Also they mostly support official servers. 
+## Add a New Site:
+Visit the site and search for anything.
+Copy the search URL (without the query) and paste it in "Add New Site."
 
-## Customization
+Example:
+YouTube: https://www.youtube.com/results?search_query=
 
-### Tampermonkey Script
-You can add or remove any site yourself following these simple steps:
-- Edit the script and scroll down to see all sites listed as
-
-      const x1337= `https://1337x.to/sort-category-search/${formattedGameName}/Games/seeders/desc/1/`;
-      createButton(x1337, "1337x", "Search on 1337x", "https://i.imgur.com/sNwyKFm.png");
-    
-
-- Either remove this whole section for each site you wanted removed, or add a site yourself with this exact format
-
-- Copy the search quarry e.g: go to 1337x, do a search, and notice the link includes the word you searched for e.g: https://1337x.to/sort-category-search/THE_WORD_YOU_SEARCHED_FOR/Games/seeders/desc/1/
-
-- Place the link in the script between and move " ${formattedGameName} " to replace the word you searched for, to be something like this: `https://1337x.to/sort-category-search/${formattedGameName}/Games/seeders/desc/1/`
-
-- Add the ID name in lower-case, and the name of the site in lower or upper case. And add a png url. 
- ( IDs must start with a letter, notice why I changed 1337x to "x1337").
-
-- If the search quarry is at the end of the URL just add " ${formattedGameName} " at the end of it.
-  
-- Save script and refresh steam page. 
 
 ## Donate
 
-- [PayPal](https://www.paypal.com/paypalme/imaboud)
 - [Buy Me a Coffee](https://buymeacoffee.com/imaboud)
+
+</div>
