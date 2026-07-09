@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>iMSteam Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="glass-container">
+    <div class="header">
+      <div class="title-group">
+        <img src="icons/icon48.png" alt="iMSteam logo" class="logo">
+        <h1>iMSteam</h1>
+      </div>
+      <div class="header-buttons">
+        <button id="openSettingsBtn" class="btn btn-gear" title="Global Settings">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </button>
+        <button id="addSiteBtn" class="btn btn-add-circle" title="Add Site">
+          <span class="plus-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="list-wrapper">
+      <div id="siteList" class="site-list"></div>
+    </div>
+  </div>
+
+  <!-- Global Settings Modal -->
+  <div id="settingsModal" class="modal">
+    <div class="modal-content glass">
+      <div class="modal-header">
+        <h2>Global Settings</h2>
+        <button class="close-btn" id="closeSettingsModal">&times;</button>
+      </div>
+      <form id="settingsForm">
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="settingFaviconGlobal">
+            <span class="custom-checkbox"></span>
+            Use Favicon on all sites
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="settingAlignment">Button Alignment on Steam</label>
+          <select id="settingAlignment">
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+          </select>
+        </div>
+
+        <!-- Button Style Preset Grid -->
+        <div class="form-group">
+          <label class="section-title">Button Style</label>
+          <div class="preset-grid">
+            <label class="preset-card">
+              <input type="radio" name="buttonStyle" id="stylePill" value="pill">
+              <div class="preset-visual">
+                <div class="vis-capsule">
+                  <div class="vis-dot"></div>
+                </div>
+              </div>
+              <span class="preset-label">Pill</span>
+            </label>
+            <label class="preset-card">
+              <input type="radio" name="buttonStyle" id="styleCircle" value="circle">
+              <div class="preset-visual">
+                <div class="vis-circle">
+                  <div class="vis-dot"></div>
+                </div>
+              </div>
+              <span class="preset-label">Circle</span>
+            </label>
+            <label class="preset-card">
+              <input type="radio" name="buttonStyle" id="styleFloating" value="floating">
+              <div class="preset-visual">
+                <div class="vis-floating">
+                  <div class="vis-dot"></div>
+                </div>
+              </div>
+              <span class="preset-label">Floating</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Label Style Preset Grid -->
+        <div class="form-group">
+          <label class="section-title">Label Display</label>
+          <div class="preset-grid">
+            <label class="preset-card">
+              <input type="radio" name="labelStyle" id="labelHidden" value="hidden">
+              <div class="preset-visual">
+                <div class="vis-label-hidden">
+                  <div class="vis-silhouette-icon"></div>
+                </div>
+              </div>
+              <span class="preset-label">Hidden</span>
+            </label>
+            <label class="preset-card">
+              <input type="radio" name="labelStyle" id="labelNext" value="next">
+              <div class="preset-visual">
+                <div class="vis-label-next">
+                  <div class="vis-silhouette-icon"></div>
+                  <div class="vis-silhouette-text"></div>
+                </div>
+              </div>
+              <span class="preset-label">Next</span>
+            </label>
+            <label class="preset-card">
+              <input type="radio" name="labelStyle" id="labelBelow" value="below">
+              <div class="preset-visual">
+                <div class="vis-label-below">
+                  <div class="vis-silhouette-icon"></div>
+                  <div class="vis-silhouette-text-short"></div>
+                </div>
+              </div>
+              <span class="preset-label">Below</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 18px;">
+          <button type="button" id="resetDefault" class="btn btn-secondary" style="width: 100%; display: flex; justify-content: center; align-items: center;">Reset Default Sites</button>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="cancelSettings">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Settings</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Add Site Modal -->
+  <div id="addSiteModal" class="modal">
+    <div class="modal-content glass">
+      <div class="modal-header">
+        <h2>Add New Site</h2>
+        <button class="close-btn" id="closeAddModal">&times;</button>
+      </div>
+      <form id="addSiteForm">
+        <div class="form-group">
+          <label for="siteName">Site Name</label>
+          <input type="text" id="siteName" required placeholder="e.g. FitGirl">
+        </div>
+        
+        <div class="form-group">
+          <label for="siteUrl">Search URL</label>
+          <input type="text" id="siteUrl" required placeholder="e.g. https://example.com/?s=">
+          <small>Use the search URL prefix. The game name will be appended.</small>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="addAutoFavicon" checked>
+            <span class="custom-checkbox"></span>
+            Auto-fetch Favicon from Website
+          </label>
+        </div>
+
+        <!-- Manual Icon Section -->
+        <div id="addManualIconSection" style="display: none;">
+          <div class="form-group">
+            <label for="addIconUrl">Icon URL</label>
+            <input type="text" id="addIconUrl" placeholder="Paste image URL (http/https/data)">
+          </div>
+        </div>
+
+        <!-- Live Icon Preview -->
+        <div class="form-group preview-group">
+          <label>Icon Preview</label>
+          <div class="preview-box">
+            <img id="addIconPreview" src="icons/icon48.png" alt="Icon Preview">
+          </div>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label" title="Toggle this if searches fail because a site strips symbols (like ™, ®, or ©) from game names.">
+            <input type="checkbox" id="addUseSymbols">
+            <span class="custom-checkbox"></span>
+            Keep Special Characters in Search Name
+          </label>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="cancelAdd">Cancel</button>
+          <button type="submit" class="btn btn-primary">Add Site</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Edit Site Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content glass">
+      <div class="modal-header">
+        <h2>Edit Site</h2>
+        <button class="close-btn" id="closeEditModal">&times;</button>
+      </div>
+      <form id="editSiteForm">
+        <div class="form-group">
+          <label for="editSiteName">Site Name</label>
+          <input type="text" id="editSiteName" required placeholder="e.g. FitGirl">
+        </div>
+        
+        <div class="form-group">
+          <label for="editSiteUrl">Search URL</label>
+          <input type="text" id="editSiteUrl" required placeholder="e.g. https://example.com/?s=">
+          <small>Use the search URL prefix. The game name will be appended.</small>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="editAutoFavicon">
+            <span class="custom-checkbox"></span>
+            Auto-fetch Favicon from Website
+          </label>
+        </div>
+
+        <!-- Manual Icon Section -->
+        <div id="editManualIconSection" style="display: none;">
+          <div class="form-group">
+            <label for="editIconUrl">Icon URL</label>
+            <input type="text" id="editIconUrl" placeholder="Paste image URL (http/https/data)">
+          </div>
+        </div>
+
+        <!-- Live Icon Preview -->
+        <div class="form-group preview-group">
+          <label>Icon Preview</label>
+          <div class="preview-box">
+            <img id="editIconPreview" src="icons/icon48.png" alt="Icon Preview">
+          </div>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label" title="Toggle this if searches fail because a site strips symbols (like ™, ®, or ©) from game names.">
+            <input type="checkbox" id="editUseSymbols">
+            <span class="custom-checkbox"></span>
+            Keep Special Characters in Search Name
+          </label>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="cancelEdit">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
