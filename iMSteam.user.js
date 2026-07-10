@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         iMSteam
-// @version      1.4.0
+// @version      1.4.1
 // @description  Add search links for games on Steam pages with a custom Settings UI
 // @author       iMAboud
 // @match        https://store.steampowered.com/*
@@ -9,7 +9,7 @@
 // @grant        GM_addStyle
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
 
     // ---- INJECT CSS ----
@@ -49,12 +49,15 @@
             { name: "FitGirl", enabled: true, url: "https://fitgirl-repacks.site/", iconUrl: "https://i.imgur.com/GOFbweI.png", autoFavicon: false, useSymbols: false, isDefault: true },
             { name: "SteamRIP", enabled: true, url: "https://steamrip.com/", iconUrl: "https://i.imgur.com/tmvOT86.png", autoFavicon: false, useSymbols: false, isDefault: true },
             { name: "Dodi", enabled: true, url: "https://dodi-repacks.site/", iconUrl: "https://i.imgur.com/g71t1Ge.png", autoFavicon: false, useSymbols: false, isDefault: true },
-            { name: "Gload", enabled: true, url: "https://gload.to/", iconUrl: "", autoFavicon: true, useSymbols: false, isDefault: true },
+            { name: "Gload", enabled: false, url: "https://gload.to/", iconUrl: "", autoFavicon: true, useSymbols: false, isDefault: true },
             { name: "GOG", enabled: true, url: "https://www.gog-games.to/?search=", iconUrl: "https://i.imgur.com/wXfz72C.png", autoFavicon: false, useSymbols: false, isDefault: true },
-            { name: "Crack Watcher", enabled: true, url: "https://crackwatcher.com/search/", iconUrl: "", autoFavicon: true, useSymbols: false, isDefault: true },
-            { name: "RuTracker", enabled: true, url: "https://rutracker.org/", iconUrl: "https://i.imgur.com/FUojuvE.png", autoFavicon: false, useSymbols: false, isDefault: true },
-            { name: "CS.RIN.RU", enabled: true, url: "https://cs.rin.ru/forum/search.php", iconUrl: "https://i.imgur.com/17Rov4F.png", autoFavicon: false, useSymbols: false, isDefault: true },
-            { name: "Nexus Mods", enabled: true, url: "https://www.nexusmods.com/games?keyword=", iconUrl: "", autoFavicon: true, useSymbols: false, isDefault: true }
+            { name: "Crack Watcher", enabled: false, url: "https://crackwatcher.com/search/", iconUrl: "", autoFavicon: true, useSymbols: false, isDefault: true },
+            { name: "RuTracker", enabled: false, url: "https://rutracker.org/", iconUrl: "https://i.imgur.com/FUojuvE.png", autoFavicon: false, useSymbols: false, isDefault: true },
+            { name: "CS.RIN.RU", enabled: true, url: "https://cs.rin.ru/forum/search.php", iconUrl: "https://i.imgur.com/17Rov4F.png", autoFavicon: false, useSymbols: true, isDefault: true },
+            { name: "Nexus Mods", enabled: true, url: "https://www.nexusmods.com/games?keyword=", iconUrl: "", autoFavicon: true, useSymbols: false, isDefault: true },
+            { name: "Youtube", enabled: false, url: "https://www.youtube.com/results?search_query=", iconUrl: "", autoFavicon: true, useSymbols: false, isDefault: true },
+            { name: "Twitch", enabled: false, url: "https://www.twitch.tv/search?term=", iconUrl: "", autoFavicon: true, useSymbols: false, isDefault: true },
+            { name: "Steamdb", enabled: false, url: "https://steamdb.info/search/?a=all&q=", iconUrl: "", autoFavicon: true, useSymbols: false, isDefault: true }
         ];
     }
 
@@ -118,7 +121,7 @@
             if (gameNameElement.parentNode) {
                 gameNameElement.parentNode.insertBefore(buttonContainer, gameNameElement.nextSibling);
             }
-            
+
             buttonContainer.addEventListener('contextmenu', (e) => {
                 e.preventDefault();
                 openSettingsUI();
@@ -140,7 +143,7 @@
             border-radius: 12px;
             width: 100%;
         `;
-        
+
         buttonContainer.title = "Right-click to open iMSteam Settings";
         buttonContainer.innerHTML = "";
 
@@ -167,6 +170,9 @@
                 case "RuTracker": searchURL = `${site.url}forum/tracker.php?nm=${formattedGameName}`; break;
                 case "CS.RIN.RU": searchURL = `${site.url}?keywords=${formattedGameName}&fid[]=10&sr=topics&sf=titleonly&submit=Search`; break;
                 case "Nexus Mods": searchURL = `${site.url}${formattedGameName}`; break;
+                case "Youtube": searchURL = `${site.url}${formattedGameName}`; break;
+                case "Twitch": searchURL = `${site.url}${formattedGameName}`; break;
+                case "Steamdb": searchURL = `${site.url}${formattedGameName}`; break;
                 default: searchURL = `${site.url}?s=${formattedGameName}`;
             }
         } else {
@@ -177,7 +183,7 @@
         linkButton.href = searchURL;
         linkButton.target = "_blank";
         linkButton.title = `Search on ${site.name}`;
-        
+
         linkButton.style.cssText = `
             display: inline-flex;
             align-items: center;
@@ -190,7 +196,7 @@
         `;
 
         const btnVisual = document.createElement("span");
-        
+
         if (buttonStyle === 'pill') {
             btnVisual.style.cssText = `
                 width: 72px; height: 36px; border-radius: 100px;
@@ -242,7 +248,7 @@
         const img = new Image();
         img.src = getSiteIconUrl(site);
         img.alt = site.name;
-        
+
         if (buttonStyle === 'pill') {
             img.style.cssText = "width: 100%; height: 100%; object-fit: contain; padding: 5px; flex-shrink: 0;";
         } else if (buttonStyle === 'circle') {
@@ -275,7 +281,7 @@
 
     function createSettingsUI() {
         if (settingsOverlay) return;
-        
+
         settingsOverlay = document.createElement('div');
         settingsOverlay.style.cssText = `
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -381,52 +387,52 @@
             </div>
         `;
         document.body.appendChild(settingsOverlay);
-        
+
         // Listeners for UI toggles
         document.getElementById('imsteam-close-btn').addEventListener('click', closeSettingsUI);
         settingsOverlay.addEventListener('click', (e) => {
             if (e.target === settingsOverlay) closeSettingsUI();
         });
-        
+
         const updateRender = () => {
             saveSettings();
             renderButtons();
         };
 
         document.getElementById('imsteam-faviconGlobal').addEventListener('change', (e) => { faviconGlobal = e.target.checked; updateRender(); });
-        
+
         document.querySelectorAll('input[name="alignment"]').forEach(r => r.addEventListener('change', (e) => { buttonAlignment = e.target.value; updateRender(); }));
         document.querySelectorAll('input[name="btnStyle"]').forEach(r => r.addEventListener('change', (e) => { buttonStyle = e.target.value; updateRender(); }));
         document.querySelectorAll('input[name="lblStyle"]').forEach(r => r.addEventListener('change', (e) => { labelStyle = e.target.value; updateRender(); }));
-        
+
         document.getElementById('imsteam-reset-btn').addEventListener('click', () => {
-            if(confirm('Restore default sites? Custom sites will be kept.')) {
+            if (confirm('Restore default sites? Custom sites will be kept.')) {
                 const customSites = currentSites.filter(s => !s.isDefault);
                 currentSites = [...getDefaultSites(), ...customSites];
                 updateRender();
                 populateSitesList();
             }
         });
-        
+
         // Add/Edit Listeners
         document.getElementById('imsteam-add-btn').addEventListener('click', () => openFormView());
         document.getElementById('imsteam-form-close').addEventListener('click', closeFormView);
         document.getElementById('imsteam-form-cancel').addEventListener('click', closeFormView);
-        
+
         document.getElementById('imsteam-form-save').addEventListener('click', () => {
             const name = document.getElementById('imsteam-form-name').value.trim();
             const url = document.getElementById('imsteam-form-url').value.trim();
             const iconUrl = document.getElementById('imsteam-form-icon').value.trim();
             const useSymbols = document.getElementById('imsteam-form-symbols').checked;
-            
+
             if (!name || !url) { alert("Name and URL are required."); return; }
-            
+
             if (editingIndex > -1) {
                 currentSites[editingIndex] = { ...currentSites[editingIndex], name, url, iconUrl, autoFavicon: !iconUrl, useSymbols };
             } else {
                 currentSites.push({ name, url, iconUrl, enabled: true, autoFavicon: !iconUrl, useSymbols, isDefault: false });
             }
-            
+
             updateRender();
             populateSitesList();
             closeFormView();
@@ -437,7 +443,7 @@
         editingIndex = index;
         document.getElementById('imsteam-main-view').style.display = 'none';
         document.getElementById('imsteam-form-view').style.display = 'flex';
-        
+
         if (index > -1) {
             document.getElementById('imsteam-form-title').innerText = "Edit Site";
             const site = currentSites[index];
@@ -459,7 +465,7 @@
         document.getElementById('imsteam-main-view').style.display = 'flex';
         editingIndex = -1;
     }
-    
+
     function populateSitesList() {
         const list = document.getElementById('imsteam-sites-list');
         list.innerHTML = '';
@@ -469,7 +475,7 @@
             row.style.opacity = site.enabled ? '1' : '0.5';
             row.draggable = true;
             row.dataset.index = index;
-            
+
             row.innerHTML = `
                 <div style="display: flex; align-items: center; gap: 4px;">
                     <span class="imsteam-drag-handle" title="Drag to reorder">☰</span>
@@ -489,27 +495,27 @@
                     </label>
                 </div>
             `;
-            
+
             // Drag and Drop Listeners
-            row.addEventListener('dragstart', function(e) {
+            row.addEventListener('dragstart', function (e) {
                 this.classList.add('dragging');
                 dragSrcEl = this;
                 e.dataTransfer.effectAllowed = 'move';
                 e.dataTransfer.setData('text/plain', this.dataset.index);
             });
-            
-            row.addEventListener('dragover', function(e) {
+
+            row.addEventListener('dragover', function (e) {
                 if (e.preventDefault) e.preventDefault();
                 this.classList.add('drag-over');
                 e.dataTransfer.dropEffect = 'move';
                 return false;
             });
-            
-            row.addEventListener('dragleave', function(e) {
+
+            row.addEventListener('dragleave', function (e) {
                 this.classList.remove('drag-over');
             });
-            
-            row.addEventListener('drop', function(e) {
+
+            row.addEventListener('drop', function (e) {
                 e.stopPropagation();
                 if (dragSrcEl !== this) {
                     const fromIndex = parseInt(e.dataTransfer.getData('text/plain'));
@@ -522,15 +528,15 @@
                 }
                 return false;
             });
-            
-            row.addEventListener('dragend', function(e) {
+
+            row.addEventListener('dragend', function (e) {
                 this.classList.remove('dragging');
                 list.querySelectorAll('.imsteam-site-row').forEach(item => item.classList.remove('drag-over'));
             });
 
             list.appendChild(row);
         });
-        
+
         list.querySelectorAll('.imsteam-toggle-site').forEach(cb => {
             cb.addEventListener('change', (e) => {
                 const idx = e.target.getAttribute('data-idx');
@@ -547,10 +553,10 @@
                 openFormView(idx);
             });
         });
-        
+
         list.querySelectorAll('.del-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
-                if(confirm('Delete this site?')) {
+                if (confirm('Delete this site?')) {
                     const idx = e.currentTarget.getAttribute('data-idx');
                     currentSites.splice(idx, 1);
                     saveSettings();
@@ -567,7 +573,7 @@
         closeFormView();
         settingsOverlay.style.display = 'flex';
     }
-    
+
     function closeSettingsUI() {
         if (settingsOverlay) settingsOverlay.style.display = 'none';
     }
@@ -578,31 +584,31 @@
             setTimeout(startSteamLogic, 100);
             return;
         }
-        
+
         renderButtons();
-        
+
         let lastUrl = location.href;
         const observer = new MutationObserver((mutations) => {
             if (location.href !== lastUrl) {
                 lastUrl = location.href;
                 setTimeout(renderButtons, 500);
             }
-            
+
             const shouldReinit = mutations.some(mutation => {
                 return Array.from(mutation.addedNodes).some(node => {
                     if (node.nodeType === Node.ELEMENT_NODE) {
                         return node.matches?.('.apphub_AppName, #appHubAppName, .game_title_area, .game_description_header') ||
-                               node.querySelector?.('.apphub_AppName, #appHubAppName, .game_title_area, .game_description_header');
+                            node.querySelector?.('.apphub_AppName, #appHubAppName, .game_title_area, .game_description_header');
                     }
                     return false;
                 });
             });
-            
+
             if (shouldReinit) {
                 setTimeout(renderButtons, 500);
             }
         });
-        
+
         observer.observe(document.body, { childList: true, subtree: true });
         setTimeout(renderButtons, 1000);
     };

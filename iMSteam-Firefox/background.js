@@ -46,7 +46,7 @@ const defaultSites = [
   },
   {
     name: "Gload",
-    enabled: true,
+    enabled: false,
     url: "https://gload.to/",
     iconUrl: "icons/Gload.png",
     autoFavicon: false,
@@ -64,7 +64,7 @@ const defaultSites = [
   },
   {
     name: "Crack Watcher",
-    enabled: true,
+    enabled: false,
     url: "https://crackwatcher.com/search/",
     iconUrl: "icons/CrackWatcher.png",
     autoFavicon: false,
@@ -73,7 +73,7 @@ const defaultSites = [
   },
   {
     name: "RuTracker",
-    enabled: true,
+    enabled: false,
     url: "https://rutracker.org/",
     iconUrl: "icons/RuTracker.png",
     autoFavicon: false,
@@ -86,7 +86,7 @@ const defaultSites = [
     url: "https://cs.rin.ru/forum/search.php",
     iconUrl: "icons/Csrin.png",
     autoFavicon: false,
-    useSymbols: false,
+    useSymbols: true,
     isDefault: true
   },
   {
@@ -97,13 +97,40 @@ const defaultSites = [
     autoFavicon: false,
     useSymbols: false,
     isDefault: true
+  },
+  {
+    name: "Youtube",
+    enabled: false,
+    url: "https://www.youtube.com/results?search_query=",
+    iconUrl: "icons/Youtube.png",
+    autoFavicon: true,
+    useSymbols: false,
+    isDefault: true
+  },
+  {
+    name: "Twitch",
+    enabled: false,
+    url: "https://www.twitch.tv/search?term=",
+    iconUrl: "icons/Twitch.png",
+    autoFavicon: true,
+    useSymbols: false,
+    isDefault: true
+  },
+  {
+    name: "Steamdb",
+    enabled: false,
+    url: "https://steamdb.info/search/?a=all&q=",
+    iconUrl: "icons/Steamdb.png",
+    autoFavicon: true,
+    useSymbols: false,
+    isDefault: true
   }
 ];
 
 const initializeDefaultSites = () => {
   chrome.storage.local.get(['sites', 'faviconGlobal', 'buttonAlignment', 'buttonStyle', 'labelStyle'], (data) => {
     let currentSites = data.sites || [];
-    
+
     let updates = {};
     if (currentSites.length === 0) {
       currentSites = defaultSites;

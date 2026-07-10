@@ -53,7 +53,7 @@ function getDefaultSites() {
     },
     {
       name: "Gload",
-      enabled: true,
+      enabled: false,
       url: "https://gload.to/",
       iconUrl: "icons/Gload.png",
       autoFavicon: false,
@@ -71,7 +71,7 @@ function getDefaultSites() {
     },
     {
       name: "Crack Watcher",
-      enabled: true,
+      enabled: false,
       url: "https://crackwatcher.com/search/",
       iconUrl: "icons/CrackWatcher.png",
       autoFavicon: false,
@@ -80,7 +80,7 @@ function getDefaultSites() {
     },
     {
       name: "RuTracker",
-      enabled: true,
+      enabled: false,
       url: "https://rutracker.org/",
       iconUrl: "icons/RuTracker.png",
       autoFavicon: false,
@@ -93,7 +93,7 @@ function getDefaultSites() {
       url: "https://cs.rin.ru/forum/search.php",
       iconUrl: "icons/Csrin.png",
       autoFavicon: false,
-      useSymbols: false,
+      useSymbols: true,
       isDefault: true
     },
     {
@@ -102,6 +102,33 @@ function getDefaultSites() {
       url: "https://www.nexusmods.com/games?keyword=",
       iconUrl: "icons/NexusMods.png",
       autoFavicon: false,
+      useSymbols: false,
+      isDefault: true
+    },
+    {
+      name: "Youtube",
+      enabled: false,
+      url: "https://www.youtube.com/results?search_query=",
+      iconUrl: "icons/Youtube.png",
+      autoFavicon: true,
+      useSymbols: false,
+      isDefault: true
+    },
+    {
+      name: "Twitch",
+      enabled: false,
+      url: "https://www.twitch.tv/search?term=",
+      iconUrl: "icons/Twitch.png",
+      autoFavicon: true,
+      useSymbols: false,
+      isDefault: true
+    },
+    {
+      name: "Steamdb",
+      enabled: false,
+      url: "https://steamdb.info/search/?a=all&q=",
+      iconUrl: "icons/Steamdb.png",
+      autoFavicon: true,
       useSymbols: false,
       isDefault: true
     }

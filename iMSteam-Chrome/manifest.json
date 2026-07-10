@@ -7,7 +7,7 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "version": "1.4.0",
+  "version": "1.4.1",
   "permissions": [
     "storage"
   ],
@@ -20,7 +20,9 @@
         "https://store.steampowered.com/*",
         "https://steamcommunity.com/*"
       ],
-      "js": ["content.js"],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_end"
     }
   ],
