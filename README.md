@@ -27,9 +27,17 @@ Adds pirated alternatives on Steam's website.
 - [Chromium](https://chrome.google.com/webstore/detail/ngkhabcnlbbbfgalblmejolbifddmoji)
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/imsteam/)
 
-### Load pack:
+### Load pack
 - Download the [Release](https://github.com/iMAboud/iMSteam/releases)
 - Enable dev mode in any browser > Load unpack
+
+### User script
+- Copy the code in iMSteam.user.js
+- Paste it in Tampermonkey (or any other userscript extension)
+- Enable (Allow access to file URLs)
+- To customize: Right-click any icon
+
+  <img width="382" height="502" alt="vivaldi_av3t1PBMF5" src="https://github.com/user-attachments/assets/2f4d1c57-70eb-4f08-b84b-68319c053fa9" />
 
 ## How to Use:
 Browse Steam store, and click the site under the game's name that you want.
