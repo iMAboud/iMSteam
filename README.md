@@ -32,8 +32,7 @@ Adds pirated alternatives on Steam's website.
 - Enable dev mode in any browser > Load unpack
 
 ### User script
-- Copy the code in iMSteam.user.js
-- Paste it in Tampermonkey (or any other userscript extension)
+- Paste iMSteam.user.js in Tampermonkey (or any other userscript extension)
 - Enable (Allow access to file URLs)
 - To customize: Right-click any icon
 
