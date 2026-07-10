@@ -8,44 +8,31 @@
 
 Adds pirated alternatives on Steam's website. 
 
-## Update
-- You can now add a site, customize, edit or remove any existing site.
-- Added in Chrome Extension Store
-- Firefox support
-- Tampermonkey user-script support
+</div>
 
-![](https://i.imgur.com/lTroyYX.png)
+## Update
+- Added Cs.rin.ru support
+- Site re-ordering, and customization
+- Search with/without special characters
+
+
+<img width="382" height="502" alt="vivaldi_a7O2NoNYw5" src="https://github.com/user-attachments/assets/9a99cd37-dd37-4c93-8721-8c6d067787f5" />
+<img width="382" height="502" alt="vivaldi_SgJNettIpO" src="https://github.com/user-attachments/assets/7554b16c-f6e6-4600-98e8-52cdc5fd3783" />
+<img width="382" height="502" alt="vivaldi_5Q3ZFBtwmg" src="https://github.com/user-attachments/assets/e8aea651-35e3-4e94-9d79-619ede310fca" />
+
 
 
 ## Installation
-### Chrome Extension (Recommended)
-Search for "iMSteam" in Chrome's web store or head over to this [link](https://chrome.google.com/webstore/detail/ngkhabcnlbbbfgalblmejolbifddmoji)
+### WEB STORE
+- [Chromium](https://chrome.google.com/webstore/detail/ngkhabcnlbbbfgalblmejolbifddmoji)
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/imsteam/)
 
-Or manual installation 
-1. Download the extension here [iMSteam for Chrome](https://github.com/iMAboud/iMSteam/raw/main/iMSteam%20-%20Chrome.zip) 
-2. Open Chrome and go to `chrome://extensions/`.
-3. Enable "Developer mode" in the top right corner.
-4. Click on "Load unpacked" and select the folder containing the extension files.
-
-### Firefox Extension (Recommended)
-Search for "iMSteam" in Firefox's web store or head over to this [link](https://addons.mozilla.org/en-US/firefox/addon/imsteam/)
- 
-Or manual installation:  [iMSteam for Firefox](https://github.com/iMAboud/iMSteam/raw/main/iMSteam-Firefox.zip)
-
-
-## Installation via Tampermonkey 
-
-To install this extension as a userscript using Tampermonkey:
-
-1. Click on the userscript file (`iMSteam.user.js`) and copy the entire script.
-2. Open Tampermonkey in your browser.
-3. Click on the Tampermonkey icon and select "Create a new script."
-4. Paste the contents of the userscript into the editor.
-5. Save the script by pressing `Ctrl + S` or clicking the "File" menu and selecting "Save."
-
+### Load pack:
+- Download the [Release](https://github.com/iMAboud/iMSteam/releases)
+- Enable dev mode in any browser > Load unpack
 
 ## How to Use:
-Browse Steam, and click the site under the game's name that suits you.
+Browse Steam store, and click the site under the game's name that you want.
 
 ## Add a New Site:
 Visit the site and search for anything.
@@ -59,4 +46,4 @@ YouTube: https://www.youtube.com/results?search_query=
 
 - [Buy Me a Coffee](https://buymeacoffee.com/imaboud)
 
-</div>
+
